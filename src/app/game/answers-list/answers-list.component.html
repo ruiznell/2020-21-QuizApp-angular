@@ -3,7 +3,7 @@
     <div *ngFor="let item of list;index as i" 
       (click) = "onClickHandler(item)"
         [ngClass]="isActive(item)"
-        [ngClass]="isActive(item)"
+        [ngClass]="isColors(item)"
         class="list-group-item">
       <span class="">{{i+1}}</span> {{item}}
     </div>

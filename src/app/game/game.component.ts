@@ -11,9 +11,7 @@ export class GameComponent implements OnInit {
   // public service:GameService
   // è la domanda da rappresentare
   public question!:Question
-  constructor(
-    public service:GameService
-  ) { 
+  constructor(public service:GameService) { 
     
     this.service.getResponse().subscribe(() => {
       
@@ -52,19 +50,6 @@ export class GameComponent implements OnInit {
     return {'bg-secondary': this.question.isDone}
   }
 
-  finalResult(){
-    const finalResult = {
-      isDone:0,
-      isCorrect:0
-    }
-    
-
-    for (const question of questions){
-      console.log("[Question]: \n",question.question);
-      finalResult.isDone += this.question.isDone ? 1 : 0;
-      finalResult.isCorrect += this.question.isCorrect ? 1 : 0;
-    }
-
-  }
+  
 
 }

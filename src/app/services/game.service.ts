@@ -79,4 +79,20 @@ export class GameService {
         );
         return q;
     }
+
+    getFinalResult(){
+        const finalResult = {
+            isDone:0,
+            isCorrect:0
+          }
+          
+      
+          for (const question of this.questions){
+            console.log("[Question]: \n",question.question);
+            finalResult.isDone += question.isDone ? 1 : 0;
+            finalResult.isCorrect += question.isCorrect ? 1 : 0;
+          }
+
+          return finalResult
+    }
 }

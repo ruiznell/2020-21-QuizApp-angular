@@ -26,7 +26,13 @@ export class AnswersListComponent implements OnInit {
     return {active: this.selected === currentAnswer}
   }
 
-  
+  isColors(currentAnswer:string){
+    
+    
+    return {active: this.selected === currentAnswer}
+  }
+
+
 
 
 }
